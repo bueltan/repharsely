@@ -1,0 +1,123 @@
+# ============================================
+# Python
+# ============================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+.eggs/
+dist/
+build/
+pip-wheel-metadata/
+*.manifest
+*.spec
+*.log
+
+# Byte-compiled / optimized / DLL files
+*.pyc
+
+# Virtual environment (exclude if managed externally)
+.venv/
+venv/
+env/
+ENV/
+*.env
+
+# ============================================
+# Poetry
+# ============================================
+# Lock file shouldn't be ignored, include it:
+# poetry.lock
+
+# Exclude poetry virtualenvs (local or cached)
+.poetry/
+# If using Poetry's virtualenvs inside project
+# Uncomment if you keep .venv inside project folder
+# .venv/
+
+# ============================================
+# macOS
+# ============================================
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+
+# ============================================
+# Windows
+# ============================================
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# PowerShell history
+ConsoleHost_history.txt
+
+# ============================================
+# Linux
+# ============================================
+*~
+.nfs*
+
+# ============================================
+# Editor/IDE Configs
+# ============================================
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# JetBrains IDEs
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# ============================================
+# Test and Coverage
+# ============================================
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.pytest_cache/
+.testmondata
+
+# ============================================
+# Jupyter Notebooks
+# ============================================
+.ipynb_checkpoints
+
+# ============================================
+# Logs and Temp Files
+# ============================================
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
+
+# ============================================
+# MyPy & Pylint
+# ============================================
+.mypy_cache/
+.dmypy.json
+.pyre/
+.pytype/
+pylint-report.txt
+
+# ============================================
+# VS Code Python Settings (optional)
+# ============================================
+*.code-workspace
+.env
