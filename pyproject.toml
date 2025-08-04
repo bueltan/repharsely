@@ -1,5 +1,5 @@
 [project]
-name = "repharsely"
+name = "rephrasely"
 version = "0.1.0"
 description = "This is a Slack app that helps improve grammar, spelling, and translate messages."
 authors = [
