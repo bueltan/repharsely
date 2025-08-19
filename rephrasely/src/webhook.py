@@ -1,12 +1,14 @@
 from flask import Flask, request, json
-from repharsely.src.os_env import get_user_environment_variable
-from repharsely.src.ollama_llm_grammar_translator import translate_and_improve
 from threading import Thread
 import requests
+
+#from rephrasely.src.ollama_llm_rephrasely import rephrasely_method
+from rephrasely.src.grok_llm_rephrasely import rephrasely_method
+from rephrasely.src.os_env import get_user_environment_variable
 app = Flask(__name__)
 
 
-@app.route("/slack/cmd_nice", methods=["POST"])
+@app.route("/slack/rephrasely", methods=["POST"])
 def handle_command():
     data = request.form
     trigger_id = data.get("trigger_id")
@@ -21,7 +23,7 @@ def handle_command():
 
 def process_command(trigger_id, channel_id, original_text):
     original_text = "Translate: " + original_text
-    modified_text = translate_and_improve(original_text)
+    modified_text = rephrasely_method(original_text)
     open_edit_modal(trigger_id, channel_id, modified_text)
 
 
@@ -77,7 +79,7 @@ def handle_view_submission():
 
     send_message_as_user(channel_id, edited_text)
     
-    return "", 200  
+    return "", 200
 
 def send_message_as_user(channel_id, text,):
     url = "https://slack.com/api/chat.postMessage"

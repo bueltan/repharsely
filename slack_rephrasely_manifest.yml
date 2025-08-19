@@ -1,0 +1,30 @@
+display_information:
+  name: Rephrasely
+  description: "Rephrasely  helps you send clearer, more thoughtful messages. Before your message goes out, Rephrasely uses AI to refine your text."
+  long_description: "Rephrasely is your intelligent Slack assistant that helps you send clearer, more thoughtful messages. Before your message goes out, Rephrasely uses AI to refine your text—whether that means rephrasing for tone, improving clarity, or aligning with your communication goals."
+  background_color: "#268bff"
+
+oauth_config:   
+  scopes:
+    user:
+      - commands         # needed for slash commands
+      - chat:write       # post messages as you
+      # add history scopes only if you call conversations.history:
+      # - channels:history
+      # - groups:history
+      # - im:history
+      # - mpim:history
+
+features:
+  slash_commands:
+    - command: /reph
+      url: https://c9c373c53343.ngrok-free.app/slack/rephrasely
+      description: Translate & edit with a modal
+      usage_hint: "<text>"
+      should_escape: false
+
+settings:
+  interactivity:
+    is_enabled: true
+    request_url: https://c9c373c53343.ngrok-free.app/slack/interactions
+  socket_mode_enabled: false
