@@ -2,7 +2,7 @@
 # Python
 # ============================================
 
-set_env_os.py
+secrets_envs.yml
 
 __pycache__/
 *.py[cod]
